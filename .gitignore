@@ -1,0 +1,5 @@
+_Store
+.ipynb_checkpoints
+bottleneck_features/
+__pycache__/
+__MACOSX/
