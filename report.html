@@ -12011,7 +12011,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Select three indices of your choice you wish to sample from the dataset</span>
@@ -12381,6 +12381,269 @@ AAAAkyTsAAAAkyTsAAAAk/T/AcdRHqy1z0EVAAAAAElFTkSuQmCC
 </div>
 
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">percentiles_data</span>  <span class="o">=</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">data</span><span class="o">.</span><span class="n">rank</span><span class="p">(</span><span class="n">pct</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">percentiles_samples</span> <span class="o">=</span> <span class="n">percentiles_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">indices</span><span class="p">]</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">percentiles_samples</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[3]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f5137ffee80&gt;</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+<div class="prompt"></div>
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+QmCC
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -12520,7 +12783,7 @@ AAAAkyTsAAAAkyTsAAAAk/T/AcdRHqy1z0EVAAAAAElFTkSuQmCC
     <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">new_data</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 
     <span class="c1"># TODO: Create a decision tree regressor and fit it to the training set</span>
-    <span class="n">regressor</span> <span class="o">=</span> <span class="n">DecisionTreeRegressor</span><span class="p">()</span>
+    <span class="n">regressor</span> <span class="o">=</span> <span class="n">DecisionTreeRegressor</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
     <span class="n">regressor</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 
     <span class="c1"># TODO: Report the score of the prediction using the testing set</span>
@@ -12539,23 +12802,13 @@ AAAAkyTsAAAAkyTsAAAAk/T/AcdRHqy1z0EVAAAAAElFTkSuQmCC
 <div class="output_area">
 <div class="prompt"></div>
 
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>/home/sambeth/anaconda3/lib/python3.6/site-packages/sklearn/cross_validation.py:41: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
-  &#34;This module will be removed in 0.20.&#34;, DeprecationWarning)
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-<div class="prompt"></div>
-
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>The score is -0.421422560818858 with Fresh as target variable
-The score is 0.1329985491659964 with Milk as target variable
-The score is 0.6343138607019465 with Grocery as target variable
-The score is 0.2739479973315926 with Frozen as target variable
-The score is 0.7294677811753572 with Detergents_Paper as target variable
-The score is -11.814702636805933 with Delicatessen as target variable
+<pre>The score is -0.2524698076882732 with Fresh as target variable
+The score is 0.36572529273630905 with Milk as target variable
+The score is 0.6028019788784589 with Grocery as target variable
+The score is 0.2539734466970086 with Frozen as target variable
+The score is 0.7286551812541454 with Detergents_Paper as target variable
+The score is -11.663687159428036 with Delicatessen as target variable
 </pre>
 </div>
 </div>
@@ -12600,16 +12853,16 @@ The score is -11.814702636805933 with Delicatessen as target variable
 <tbody>
 <tr>
 <td>score</td>
-<td>-0.4214</td>
-<td>0.1329</td>
-<td>0.6343</td>
-<td>0.2739</td>
-<td>0.7294</td>
-<td>-11.8147</td>
+<td>-0.2524</td>
+<td>0.3657</td>
+<td>0.6028</td>
+<td>0.2539</td>
+<td>0.7286</td>
+<td>-11.6636</td>
 </tr>
 </tbody>
 </table>
-<p>According to the score computed for the Frozen feature, it's not necessary for identifying the spending habits of customers. Grocery and Detergent_Papers features have a really good score which gives us the hint they may be necessary for identifying the spending habits of customers. Fresh and Delicatessen on the otherhand fell off the model. Personally, I feel the Frozen and Milk features should be better identifiers.</p>
+<p>According to the computed scores, Fresh and Delicatessen features failed to fit the model because they had negative values. Grocery and Detergents_Paper had high scores hinting that they have a high correlation with the other features, hence they are easy to predict using the other features and not necessarilt relevant. On the otherhand, Frozen and Milk features had low scores which hints that they do not have any correlation with the other fearures, hence could be necessary for predicting the spending habits of customers.</p>
 
 </div>
 </div>
@@ -14717,7 +14970,7 @@ JUlFRESx/j8NHBBnL5I2cwAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Scale the data using the natural logarithm</span>
@@ -14749,47 +15002,47 @@ JUlFRESx/j8NHBBnL5I2cwAAAABJRU5ErkJggg==
 </div>
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[9]:</div>
+<div class="prompt output_prompt">Out[6]:</div>
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([[&lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f32359452b0&gt;,
-        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f3235bbfe48&gt;,
-        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f3235bf1470&gt;,
-        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f3235ba5a90&gt;,
-        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f3235b65630&gt;,
-        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f3235b65668&gt;],
-       [&lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f3235acb7f0&gt;,
-        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f3235a7ed30&gt;,
-        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f3235aa0a90&gt;,
-        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f3235b003c8&gt;,
-        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f3235a2a780&gt;,
-        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f3234122e10&gt;],
-       [&lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f32340e5470&gt;,
-        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f3234097a90&gt;,
-        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f3234048b00&gt;,
-        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f32340075c0&gt;,
-        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f322ffc5160&gt;,
-        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f322fff9cc0&gt;],
-       [&lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f322ffad160&gt;,
-        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f322ff62710&gt;,
-        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f322ff18d30&gt;,
-        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f322fed8390&gt;,
-        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f322ff6a390&gt;,
-        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f322febcb00&gt;],
-       [&lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f322fe7d5c0&gt;,
-        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f322fe3b160&gt;,
-        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f322fddc400&gt;,
-        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f322fd93e80&gt;,
-        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f322fd58860&gt;,
-        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f322fd0bda0&gt;],
-       [&lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f322fccc390&gt;,
-        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f32340a4dd8&gt;,
-        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f322fc89048&gt;,
-        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f322fc96c18&gt;,
-        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f322fc6ac18&gt;,
-        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f322fc2b278&gt;]], dtype=object)</pre>
+<pre>array([[&lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f513280cbe0&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f5132189f98&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f51321465f8&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f51320ff198&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f51320b37b8&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f51320b37f0&gt;],
+       [&lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f5132025978&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f5131fdc358&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f513200e908&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f5131fc0f28&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f5131f82ac8&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f5131f8d828&gt;],
+       [&lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f5131ee8cf8&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f5131ea8358&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f5131e5ceb8&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f5131e1d518&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f5131e40f98&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f5131e05518&gt;],
+       [&lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f5131d9fc18&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f5131d7b128&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f5131e0d860&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f5131cdf978&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f5131c9f438&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f5131c52f98&gt;],
+       [&lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f5131c7d438&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f5131c3acf8&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f5131bfa748&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f5131bacc88&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f5131b6f278&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f5131b200b8&gt;],
+       [&lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f5131ad46d8&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f5131a95198&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f5131ac9cf8&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f5131adda20&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f5131a2bf28&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f51319ee668&gt;]], dtype=object)</pre>
 </div>
 
 </div>
@@ -18845,7 +19098,7 @@ RqPRaDQajUaj6Si0k6PRaDQajUaj0Wg6iv8P27KFnD1ya7EAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Display the log-transformed sample data</span>
@@ -18951,12 +19204,12 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">feature_outlier_index</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="n">remove_data</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
-<span class="c1"># For each feature find the data points with extreme high or low values</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">Counter</span>
+
+<span class="n">outliers_all</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">feature</span> <span class="ow">in</span> <span class="n">log_data</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
     
     <span class="c1"># TODO: Calculate Q1 (25th percentile of the data) for the given feature</span>
@@ -18968,33 +19221,21 @@ Once you have performed this implementation, the dataset will be stored in the v
     <span class="c1"># TODO: Use the interquartile range to calculate an outlier step (1.5 times the interquartile range)</span>
     <span class="n">step</span> <span class="o">=</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">Q3</span> <span class="o">-</span> <span class="n">Q1</span><span class="p">)</span>
     
-    <span class="c1"># Display the outliers</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data points considered outliers for the feature &#39;</span><span class="si">{}</span><span class="s2">&#39;:&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">feature</span><span class="p">))</span>
-    <span class="n">display</span><span class="p">(</span><span class="n">log_data</span><span class="p">[</span><span class="o">~</span><span class="p">((</span><span class="n">log_data</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">Q1</span> <span class="o">-</span> <span class="n">step</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">log_data</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">Q3</span> <span class="o">+</span> <span class="n">step</span><span class="p">))])</span>
-
-    <span class="c1"># OPTIONAL: Select the indices for data points you wish to remove</span>
-    <span class="n">feature_outlier_index</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">feature</span><span class="p">)]</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;index&quot;</span><span class="p">:</span> <span class="p">[</span><span class="o">*</span><span class="n">log_data</span><span class="p">[</span><span class="o">~</span><span class="p">((</span><span class="n">log_data</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">Q1</span> <span class="o">-</span> <span class="n">step</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">log_data</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">Q3</span> <span class="o">+</span> <span class="n">step</span><span class="p">))]</span><span class="o">.</span><span class="n">index</span><span class="p">]}</span>
+    <span class="c1"># outliers</span>
+    <span class="n">features_outliers</span> <span class="o">=</span> <span class="n">log_data</span><span class="p">[</span><span class="o">~</span><span class="p">((</span><span class="n">log_data</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">Q1</span> <span class="o">-</span> <span class="n">step</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">log_data</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">Q3</span> <span class="o">+</span> <span class="n">step</span><span class="p">))]</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">features_outliers</span><span class="p">)</span>
+    <span class="n">outliers_all</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">features_outliers</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span><span class="p">))</span>
     
-    <span class="n">remove_data</span><span class="o">.</span><span class="n">update</span><span class="p">([</span><span class="o">*</span><span class="n">log_data</span><span class="p">[</span><span class="o">~</span><span class="p">((</span><span class="n">log_data</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">Q1</span> <span class="o">-</span> <span class="n">step</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">log_data</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">Q3</span> <span class="o">+</span> <span class="n">step</span><span class="p">))]</span><span class="o">.</span><span class="n">index</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;These are the indexes with outliers: &quot;</span><span class="p">,</span> <span class="n">outliers_all</span><span class="p">)</span>
 
+<span class="c1"># calculating outlier counts</span>
+<span class="n">outliers_mult</span> <span class="o">=</span> <span class="p">[</span><span class="n">item</span> <span class="k">for</span> <span class="n">item</span><span class="p">,</span> <span class="n">count</span> <span class="ow">in</span> <span class="n">Counter</span><span class="p">(</span><span class="n">outliers_all</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">count</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">]</span>
 
-<span class="n">outlier_index</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
-<span class="n">outlier_features</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">log_data</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
-<span class="k">for</span> <span class="n">outlier</span> <span class="ow">in</span> <span class="n">outlier_features</span><span class="p">:</span>
-    <span class="k">for</span> <span class="n">feature</span> <span class="ow">in</span> <span class="n">feature_outlier_index</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
-        <span class="k">if</span> <span class="n">outlier</span> <span class="o">!=</span> <span class="n">feature</span><span class="p">:</span>
-            <span class="n">first</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="o">*</span><span class="n">feature_outlier_index</span><span class="p">[</span><span class="n">outlier</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
-            <span class="n">second</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="o">*</span><span class="n">feature_outlier_index</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
-            <span class="n">s</span> <span class="o">=</span> <span class="n">first</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">second</span><span class="p">)</span>
-            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">:</span>
-                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> outlier appeared in </span><span class="si">{}</span><span class="s2"> and </span><span class="si">{}</span><span class="s2"> features&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">outlier</span><span class="p">,</span> <span class="n">feature</span><span class="p">),</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
-                <span class="n">outlier_index</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">continue</span>     
+<span class="c1"># removing outlier indexes</span>
+<span class="n">good_data</span> <span class="o">=</span> <span class="n">log_data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">log_data</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="n">outliers_all</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 
-<span class="c1"># Remove the outliers, if any were specified</span>
-<span class="n">outliers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">remove_data</span><span class="p">)</span>
-<span class="n">good_data</span> <span class="o">=</span> <span class="n">log_data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">log_data</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="n">outliers</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="c1"># indexes with two or more outlier data points</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;These are the indexes with 2  or more outliers: &quot;</span><span class="p">,</span> <span class="n">outliers_mult</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -19004,15 +19245,6 @@ Once you have performed this implementation, the dataset will be stored in the v
 <div class="output_wrapper">
 <div class="output">
 
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Data points considered outliers for the feature &#39;Fresh&#39;:
-</pre>
-</div>
-</div>
 
 <div class="output_area">
 <div class="prompt"></div>
@@ -19200,15 +19432,6 @@ Once you have performed this implementation, the dataset will be stored in the v
 <div class="output_area">
 <div class="prompt"></div>
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Data points considered outliers for the feature &#39;Milk&#39;:
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-<div class="prompt"></div>
-
 
 <div class="output_html rendered_html output_subarea ">
 <div>
@@ -19284,15 +19507,6 @@ Once you have performed this implementation, the dataset will be stored in the v
 <div class="output_area">
 <div class="prompt"></div>
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Data points considered outliers for the feature &#39;Grocery&#39;:
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-<div class="prompt"></div>
-
 
 <div class="output_html rendered_html output_subarea ">
 <div>
@@ -19345,15 +19559,6 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 </div>
 
-</div>
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Data points considered outliers for the feature &#39;Frozen&#39;:
-</pre>
-</div>
 </div>
 
 <div class="output_area">
@@ -19488,15 +19693,6 @@ Once you have performed this implementation, the dataset will be stored in the v
 <div class="output_area">
 <div class="prompt"></div>
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Data points considered outliers for the feature &#39;Detergents_Paper&#39;:
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-<div class="prompt"></div>
-
 
 <div class="output_html rendered_html output_subarea ">
 <div>
@@ -19549,15 +19745,6 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 </div>
 
-</div>
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Data points considered outliers for the feature &#39;Delicatessen&#39;:
-</pre>
-</div>
 </div>
 
 <div class="output_area">
@@ -19729,30 +19916,8 @@ Once you have performed this implementation, the dataset will be stored in the v
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>{65} outlier appeared in Fresh and Frozen features 
-
-{128, 66} outlier appeared in Fresh and Delicatessen features 
-
-{154} outlier appeared in Milk and Grocery features 
-
-{154} outlier appeared in Milk and Delicatessen features 
-
-{154} outlier appeared in Grocery and Milk features 
-
-{75} outlier appeared in Grocery and Detergents_Paper features 
-
-{154} outlier appeared in Grocery and Delicatessen features 
-
-{65} outlier appeared in Frozen and Fresh features 
-
-{75} outlier appeared in Detergents_Paper and Grocery features 
-
-{128, 66} outlier appeared in Delicatessen and Fresh features 
-
-{154} outlier appeared in Delicatessen and Milk features 
-
-{154} outlier appeared in Delicatessen and Grocery features 
-
+<pre>These are the indexes with outliers:  [65, 66, 81, 95, 96, 128, 171, 193, 218, 304, 305, 338, 353, 355, 357, 412, 86, 98, 154, 356, 75, 154, 38, 57, 65, 145, 175, 264, 325, 420, 429, 439, 75, 161, 66, 109, 128, 137, 142, 154, 183, 184, 187, 203, 233, 285, 289, 343]
+These are the indexes with 2  or more outliers:  [65, 66, 128, 154, 75]
 </pre>
 </div>
 </div>
@@ -19841,8 +20006,10 @@ Once you have performed this implementation, the dataset will be stored in the v
 </tr>
 </tbody>
 </table>
-<p>From the above table there are 5 rows that appear in the outlier range with atleast two data points. These data points affected the skewness of the data making it quite difficult to find an underlying feature to predict customer behabiour. The interquartile range was calculated 1.5 times of the range itself and if any data point manages to go outside the range, clearly it has to be taken out. 
-On the whole 42 outliers were removed from the data. Removing these data points will help a lot in the feature transformation step, using Principal Component Analysis to reduce dimensionality of the data</p>
+<p>At index 65, 66, 75 and 128, we have two outliers and three outliers at index 154. I believe these need to be cut off from our data since they lie outside of the interquartile range. These outliers will hinder our attempt to cluster customers into segements, thus skewing our data analysis. 
+For the other indexes that had exactly one outlier occuring in one of the features, those also need to be cut off. I consider them as extreme outlier positions even if its just one outlier because the outlier step was calculated 1.5 times the interquartile range and any data point that falls outside that range should be considered abnormal.
+Although there is a reasonable case to keep some of these outliers as some may contain potential information for the dataset but it is much better to focus on data points that are representative of the dataset.
+Removing these data points will help a lot in the feature transformation step, using Principal Component Analysis to reduce dimensionality of the data.</p>
 
 </div>
 </div>
@@ -23689,8 +23856,7 @@ PHdMjgAAAABJRU5ErkJggg==
 <p>So we could ask a couple of questions. Who are your customers and what type of products do they purchase? With regards to the customers in segment 0, they are customers who focus on fresh and frozen products, which means they constantly need supply on a daily basis. Now imagine cutting off that supply, from 5 times a week to 3 times a week. That would clearly make the foods not so fresh anymore since they will be kept for longer periods before delivered. Customers in segment 0 will not react positively to this change.</p>
 <p>On the otherhand, customers in segment 1 will not be really affected by this new change. The reason is that, they do not really have a product category they focus on. They purchase a little bit of everything in bulk and can handle deliveries 3 times a week since they would have enough to go about their businesses with.
 So one group of customers will respond positively and the other negatively but are clearly speculative.</p>
-<p>So with regards to A/B testing with have two variants. One is to deliver products 5 times a week and the other is to deliver 3 times a week. So a decision is rolled out, the compnay will have to ask its customer base which variant is preferred and have them vote.</p>
-<p>Until the A/B test is done, we can't really be sure. The only thing we can be really sure of is that the change will not affect all customer eqaully.</p>
+<p>So with regards to A/B testing we have two variants. One is to deliver products 5 times a week and the other is to deliver 3 times a week. A sample of customers from each segment is selected, a change is made to deliver services 3 times a week to these customers. The feedback on the sample of customers is collected and checked against the other customers with the regular service delivery of 5 days. The feedback should be enough to help the company know which decision to roll out.</p>
 
 </div>
 </div>
